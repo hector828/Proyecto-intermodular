@@ -1,0 +1,15 @@
+dn: cn=grupoprueba,dc=arquitectotec,dc=es
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: usuario
+uid: usuario
+ou: 
+uidNumber: 155
+gidNumber: 155
+homeDirectory: /home/usuario
+loginShell: /bin/bash
+userPassword: {SSHA}LHd0vcwOp1YZLP7Rtew82lm5iGNBewil
+sn: usuario
+givenName: usuario
