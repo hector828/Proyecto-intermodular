@@ -1,3 +1,4 @@
+/*Pagina web*/
 body{
     width: 1400px;
     box-sizing: border-box;
@@ -13,6 +14,13 @@ ol{
     box-sizing: border-box;
     background-color: rgb(106, 186, 239);
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    z-index: 100;
+}
 header ol{
     display: flex;
     justify-content: space-evenly;
@@ -26,7 +34,12 @@ header li{
     align-content: center;
     box-sizing: border-box;
 }
-section:nth-of-type(2) img{
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+main.index section:nth-of-type(2) img{
     width: 0;
 }
 @media (min-width: 2201px) {
@@ -34,13 +47,25 @@ section:nth-of-type(2) img{
         width: 2100px;
         border: 2px solid black;
     }
+    header{
+        width: 2100px;
+        position: fixed;
+        top: 0px;
+    }
     header li{
         font-size: 36px;
     }
+    p,footer{
+        font-size: 32px;
+    }
 }
 @media (max-width: 2200px){
-    body{
+    body,header{
         width: 100%;
+    }
+    header{
+    position: fixed;
+    top: 0px;
     }
     header li{
         font-size: 32px;
@@ -71,6 +96,12 @@ section:nth-of-type(2) img{
     }
 }
 @media (max-width: 800px){
+    h2{
+        margin: 10px 0;
+    }
+    header{
+        position: inherit;
+    }
     header li{
         font-size: 18px;
         width: 50%;
@@ -110,41 +141,65 @@ header li:hover{
     background-color: rgb(94, 157, 199);
 }
 main{
-    padding: 30px;
+    padding: 0 30px;
 }
-section{
+main.index section{
     position: relative;
     display: flex;
     justify-content: space-evenly;
     align-content: start;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
-img{
-    width: 40%;
+main.index img{
+    width: 60%;
     height: auto;
     position: sticky;
     top: 10px;
     margin: 0 20px;
     align-self: flex-start;
 }
-section div:nth-of-type(1){
-    width: 60%;
+main.index section div:nth-of-type(1){
+    width: 40%;
     border: 1px solid black;
     padding: 20px;
 }
-h1{
-    margin: 0;
-    padding: 0;
-    font-size: inherit;
-}
 h2{
+    margin-top: 75px;
+    margin-bottom: 25px;
     text-align: center;
     font-size: 34px;
 }
-p{
+main.index p{
     text-align: justify;
     margin: 0;
+
 }
+/*Servicios*/
+main.servicios article:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main.servicios article:nth-of-type(1) section{
+    box-sizing: border-box;
+    border: 10px solid black;
+    width: 22%;
+    height: 100px;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 217, 255, 0.5)),  url(img/obra1.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    background-clip: padding-box;
+}
+main.servicios article:nth-of-type(1) section:hover{
+    border: 5px solid black;
+}
+main.servicios h3{  
+    color: white;
+}
+/*Footer */
 footer ol{
     display: flex;
     justify-content: space-evenly;
